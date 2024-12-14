@@ -1,0 +1,87 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: rgba(240, 240, 240, 0.9);
+    margin: 0;
+    font-family: 'Roboto', sans-serif; /* Define a fonte base como Roboto */
+}
+
+.githubCard {
+    position: relative;
+    width: 300px;
+    height: 400px;
+    cursor: pointer;
+    transform-style: preserve-3d;
+    transform: perspective(2500px);
+    transition: 1s;
+}
+
+.githubCard:hover {
+    transform: perspective(2500px) rotateY(180deg);
+}
+
+.cardFront, .cardInside {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.cardFront {
+    background: linear-gradient(135deg, rgba(237, 241, 0, 0.836), rgba(88, 88, 88, 0.5)); /* Ajuste de cores conforme solicitado */
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.front-text h3, .front-text h2 {
+    margin: 0;
+    font-size: 1.5rem; /* Ajuste do tamanho da fonte */
+    font-weight: 100; /* Peso fino para texto */
+}
+
+.cardInside {
+    background: white;
+    color: rgb(51, 51, 51); /* Ajuste da cor do texto interno */
+    transform: rotateY(180deg);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.description p {
+    margin: 20px 0;
+    color: rgb(255, 255, 255); /* Ajuste da cor conforme especificado */
+    font-size: 1.5rem; /* Fonte consistente com o novo padrão */
+}
+
+.visit-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: rgba(88, 88, 88, 0.7); /* Botão com fundo consistente */
+    color: rgba(237, 241, 0, 0.836); /* Texto do botão ajustado */
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 550;
+}
+
+.visit-btn:hover {
+    background-color: rgba(88, 88, 88, 0.5); /* Transição suave no hover */
+    opacity: 0.6;
+}
+
+.wrap-deco, .wrap-decoTwo {
+    display: none;
+}
